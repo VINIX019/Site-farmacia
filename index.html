@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -12,15 +12,78 @@
 </head>
 
 <body>
-  <div id="nav-bar" class="w-full h-24 flex items-center px-8 bg-white shadow-sm gap-8">
+  <div id="nav-bar" class="w-full h-24 flex items-center px-8 bg-white shadow-sm gap-8 fixed z-50">
     <a href="index.html"><img src="/assets/redefarmagente_logo.png" alt="Logo" class="h-16 w-auto"></a>
 
     <a href="#Promocoes" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold ml-auto">Promoções</a>
     <a href="#Quemsomos" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold">Quem somos</a>
     <a href="#Contato" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold">Contato</a>
   </div>
-  <div id="Promocoes">
+  <div id="Promocoes" class="pt-24">
+    <div class="w-full py-20 bg-white">
+      <div class="container mx-auto px-8">
 
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div class="flex flex-col gap-2">
+            <span class="text-[#da1d83] font-bold uppercase tracking-widest text-sm">Ofertas do Mês</span>
+            <h2 class="italic text-[#009b9d] font-black text-4xl">Promoções em Destaque</h2>
+            <div class="h-1.5 w-20 bg-[#da1d83] rounded-full"></div>
+          </div>
+          <p class="text-gray-500 max-w-md">
+            Preços especiais válidos enquanto durarem os estoques. Aproveite nossa entrega rápida na Pompeia!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div
+            class="group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+              <img src="/assets/produto-exemplo.webp" alt="Produto"
+                class="max-h-full w-auto object-contain group-hover:scale-110 duration-500">
+              <div
+                class="absolute top-4 right-4 bg-[#da1d83] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                -20% OFF
+              </div>
+            </div>
+            <div class="p-6 flex flex-col grow gap-2">
+              <span class="text-gray-400 text-xs font-bold uppercase">Categoria</span>
+              <h3 class="text-gray-800 font-bold text-lg leading-tight">Nome do Medicamento ou Produto</h3>
+              <div class="mt-auto pt-4">
+                <div class="flex items-center gap-2">
+                  <span class="text-gray-400 line-through text-sm">R$ 49,90</span>
+                  <span class="text-[#009b9d] font-black text-2xl">R$ 39,90</span>
+                </div>
+                <button class="add-to-cart-btn" data-name="Nimesulida 100mg" data-price="15.90">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+              <div
+                class="bg-gray-200 w-24 h-24 rounded-full flex items-center justify-center text-gray-400 font-bold italic">
+                FOTO</div>
+            </div>
+            <div class="p-6 flex flex-col grow gap-2">
+              <span class="text-gray-400 text-xs font-bold uppercase">Higiene</span>
+              <h3 class="text-gray-800 font-bold text-lg leading-tight">Oferta em Dermocosméticos</h3>
+              <div class="mt-auto pt-4">
+                <span class="text-[#009b9d] font-black text-xl italic">Consulte Preços</span>
+                <a href="https://wa.me/5519989776179?text=Quais as ofertas de Dermocosméticos?"
+                  class="mt-4 w-full border-2 border-[#009b9d] text-[#009b9d] font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#009b9d] hover:text-white transition-all duration-300 no-underline">
+                  Chamar no Zap
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
   <div id="Quemsomos" class="py-20 bg-gray-50">
     <div class="container mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
@@ -60,8 +123,9 @@
           </div>
         </div>
       </div>
-
     </div>
+  </div>
+  <div id="farmacia-popular">
     <div class="w-full py-12 bg-white">
       <div class="container mx-auto px-8">
         <div
@@ -78,7 +142,8 @@
             <p class="text-gray-700 text-lg leading-relaxed">
               Garantimos o acesso a medicamentos essenciais com descontos de até
               <span class="font-bold text-[#009b9d]">100%</span>.
-              Traga sua receita médica e documento com foto para retirar seus medicamentos para diabetes, hipertensão e
+              Traga sua receita médica e documento com foto para retirar seus medicamentos para diabetes, hipertensão
+              e
               asma de forma gratuita.
             </p>
 
@@ -92,7 +157,7 @@
             <div class="flex justify-start mt-2">
               <a href="https://wa.me/5519989776179?text=Olá! Gostaria de saber mais sobre os medicamentos da Farmácia Popular."
                 target="_blank"
-                class="bg-[#009b9d] text-white font-bold py-3 px-8 rounded-full hover:bg-[#007a7c] hover:scale-105 duration-300 shadow-md flex items-center justify-center gap-3 no-underline">
+                class="bg-[#009b9d] text-white font-bold py-3 px-8 rounded-full hover:bg-[#007a7c] hover:scale-105 duration-300 shadow-md flex items-center justify-center gap-3 no-underline w-fit">
                 Saiba mais
               </a>
             </div>
@@ -104,6 +169,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="convenios">
     <div class="w-full py-16 bg-gray-50">
       <div class="container mx-auto px-8">
 
@@ -111,7 +178,8 @@
           <div class="flex flex-col gap-2">
             <h2 class="italic text-[#009b9d] font-black text-4xl">Convênios</h2>
             <div class="h-1 w-20 bg-[#da1d83] rounded-full"></div>
-            <p class="text-gray-600 mt-2">Aceitamos diversos convênios e planos de saúde para facilitar sua compra.</p>
+            <p class="text-gray-600 mt-2">Aceitamos diversos convênios e planos de saúde para facilitar sua compra.
+            </p>
           </div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -119,98 +187,165 @@
             <div
               class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
               <span class="font-bold text-gray-400"><IMG src="/assets/logo aspmc.webp" alt="Convênio 1"
-                  class="w-96 h-auto object-cover"></IMG></span>
+                  class="max-h-full max-w-full object-contain"></IMG></span>
             </div>
 
             <div
               class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
               <span class="font-bold text-gray-400"><IMG src="/assets/sanasa logo.webp" alt="Convênio 2"
-                  class="w-96 h-auto object-cover"></IMG></span>
+                  class="max-h-full max-w-full object-contain"></IMG></span>
             </div>
 
-            <div
-              class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
-              <span class="font-bold text-gray-400">LOGOTIPO</span>
-            </div>
 
           </div>
         </div>
 
       </div>
     </div>
-    <div id="Contato" class="w-full py-10 bg-white">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-stretch justify-center gap-6">
+  </div>
+  <div id="Contato" class="w-full py-10 bg-white">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-stretch justify-center gap-6">
 
-        <div
-          class="bg-[#009b9d] w-full md:max-w-112.5 rounded-3xl flex flex-col gap-6 p-8 md:p-10 items-center text-center shadow-xl">
+      <div
+        class="bg-[#009b9d] w-full md:max-w-112.5 rounded-3xl flex flex-col gap-6 p-8 md:p-10 items-center text-center shadow-xl">
 
-          <div class="flex flex-col gap-2">
-            <h3 class="text-white text-2xl md:text-3xl font-bold leading-tight">
-              Entre em contato conosco
-            </h3>
-            <p class="text-white/80 text-sm">
-              Dúvidas ou pedidos? Nossa equipe está pronta para te atender.
-            </p>
-          </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="text-white text-2xl md:text-3xl font-bold leading-tight">
+            Entre em contato conosco
+          </h3>
+          <p class="text-white/80 text-sm">
+            Dúvidas ou pedidos? Nossa equipe está pronta para te atender.
+          </p>
+        </div>
 
-          <a id="botao-wpp" href="https://wa.me/5519989776179?text=Olá! Gostaria de fazer um pedido." target="_blank"
-            class="bg-[#da1d83] text-white font-bold py-4 px-8 rounded-full hover:bg-[#c21877] hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 decoration-0:">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.887.002-5.462-4.415-9.89-9.881-9.891-5.446 0-9.886 4.438-9.889 9.887-.001 2.225.618 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-            </svg>
-            Enviar mensagem
-          </a>
+        <a id="botao-wpp" href="https://wa.me/5519989776179?text=Olá! Gostaria de fazer um pedido." target="_blank"
+          class="bg-[#da1d83] text-white font-bold py-4 px-8 rounded-full hover:bg-[#c21877] hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 decoration-0:">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.887.002-5.462-4.415-9.89-9.881-9.891-5.446 0-9.886 4.438-9.889 9.887-.001 2.225.618 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+          </svg>
+          Enviar mensagem
+        </a>
 
-          <div class="w-full flex flex-col gap-2">
-            <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Como chegar</p>
-            <div class="flex gap-3">
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Farma+Gente+Pompeia+Campinas" target="_blank"
-                class="flex-1 bg-white text-[#009b9d] font-bold py-3 rounded-xl active:bg-gray-100 duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg"
-                  class="h-4 w-auto" alt="">
-                Maps
-              </a>
-              <a href="https://www.waze.com/live-map/directions?to=ll.-22.929828%2C-47.087135" target="_blank"
-                class="flex-1 bg-[#33ccff] text-white font-bold py-3 rounded-xl active:bg-[#2bb5e0] duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105 ">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 512 512">
-                  <path
-                    d="M447.5 282.8c-1.3-46.3-21.5-88-56.9-117.2c-35-28.9-81.2-44.4-130-43.6c-48.8.8-94.2 18.5-127.9 49.8c-32.5 30.1-49.9 71.3-49.1 115.8c.4 20.3 4.2 39.8 11.1 57.8l-15.6 34.6c-2.4 5.3-1.1 11.5 3.3 15.4c2.8 2.5 6.4 3.8 10.1 3.8c1.9 0 3.9-.3 5.7-1.1l42.6-17.3c15.6 10.6 32.7 18.9 51 24.6c-1.6 3.6-2.5 7.5-2.5 11.7c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-3.6-.7-7.1-1.9-10.2c21.2 2.5 42.9 2.1 64.3-1.3c-1.2 3.1-1.9 6.6-1.9 10.2c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-4.7-1.1-9.1-3.1-13.1c40.3-14.4 73.8-42.6 94.3-79.3c5.5-9.9 10-20.4 13.4-31.5c4.7-15.2 6.1-31.1 6.1-43.5zM175.4 246.3c0-14.6 11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5s-26.5-11.9-26.5-26.5zm165.7 66.2c-15.6 21.2-41.9 33.1-73.4 33.1c-31.4 0-57.8-11.9-73.4-33.1c-2-2.7-1.4-6.5 1.3-8.5c2.7-2 6.5-1.4 8.5 1.3c13.1 17.8 36.3 27.8 63.5 27.8s50.4-10 63.5-27.8c2-2.7 5.8-3.3 8.5-1.3c2.8 2 3.4 5.8 1.5 8.5zm-5.7-39.7c-14.6 0-26.5-11.9-26.5-26.5s11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5z" />
-                </svg>
-                Waze
-              </a>
-            </div>
-          </div>
-
-          <div class="mt-2 pt-6 border-t border-white/20 w-full flex flex-col gap-3">
-            <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Nossos Fixos</p>
-            <div class="flex flex-wrap justify-center gap-3">
-              <a href="tel:1932697718"
-                class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
-                (19) 3269-7718
-              </a>
-              <a href="tel:1932689757"
-                class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
-                (19) 3268-9757
-              </a>
-            </div>
+        <div class="w-full flex flex-col gap-2">
+          <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Como chegar</p>
+          <div class="flex gap-3">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Farma+Gente+Pompeia+Campinas" target="_blank"
+              class="flex-1 bg-white text-[#009b9d] font-bold py-3 rounded-xl active:bg-gray-100 duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg"
+                class="h-4 w-auto" alt="">
+              Maps
+            </a>
+            <a href="https://www.waze.com/live-map/directions?to=ll.-22.929828%2C-47.087135" target="_blank"
+              class="flex-1 bg-[#33ccff] text-white font-bold py-3 rounded-xl active:bg-[#2bb5e0] duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105 ">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 512 512">
+                <path
+                  d="M447.5 282.8c-1.3-46.3-21.5-88-56.9-117.2c-35-28.9-81.2-44.4-130-43.6c-48.8.8-94.2 18.5-127.9 49.8c-32.5 30.1-49.9 71.3-49.1 115.8c.4 20.3 4.2 39.8 11.1 57.8l-15.6 34.6c-2.4 5.3-1.1 11.5 3.3 15.4c2.8 2.5 6.4 3.8 10.1 3.8c1.9 0 3.9-.3 5.7-1.1l42.6-17.3c15.6 10.6 32.7 18.9 51 24.6c-1.6 3.6-2.5 7.5-2.5 11.7c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-3.6-.7-7.1-1.9-10.2c21.2 2.5 42.9 2.1 64.3-1.3c-1.2 3.1-1.9 6.6-1.9 10.2c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-4.7-1.1-9.1-3.1-13.1c40.3-14.4 73.8-42.6 94.3-79.3c5.5-9.9 10-20.4 13.4-31.5c4.7-15.2 6.1-31.1 6.1-43.5zM175.4 246.3c0-14.6 11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5s-26.5-11.9-26.5-26.5zm165.7 66.2c-15.6 21.2-41.9 33.1-73.4 33.1c-31.4 0-57.8-11.9-73.4-33.1c-2-2.7-1.4-6.5 1.3-8.5c2.7-2 6.5-1.4 8.5 1.3c13.1 17.8 36.3 27.8 63.5 27.8s50.4-10 63.5-27.8c2-2.7 5.8-3.3 8.5-1.3c2.8 2 3.4 5.8 1.5 8.5zm-5.7-39.7c-14.6 0-26.5-11.9-26.5-26.5s11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5z" />
+              </svg>
+              Waze
+            </a>
           </div>
         </div>
 
-        <div
-          class="w-full md:flex-1 min-h-75 md:min-h-full rounded-3xl overflow-hidden shadow-lg border-4 border-gray-50">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.316885376045!2d-47.08971012395567!3d-22.929341638995393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8e52a20b7b1%3A0x5481a45c5823df37!2sFarma%20Gente%20Pomp%C3%A9ia!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+        <div class="mt-2 pt-6 border-t border-white/20 w-full flex flex-col gap-3">
+          <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Nossos Fixos</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="tel:1932697718"
+              class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
+              (19) 3269-7718
+            </a>
+            <a href="tel:1932689757"
+              class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
+              (19) 3268-9757
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full md:flex-1 min-h-75 md:min-h-full rounded-3xl overflow-hidden shadow-lg border-4 border-gray-50">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.316885376045!2d-47.08971012395567!3d-22.929341638995393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8e52a20b7b1%3A0x5481a45c5823df37!2sFarma%20Gente%20Pomp%C3%A9ia!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+  <div
+    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300"
+    id="cart-modal">
+    <div class="bg-white p-8 rounded-3xl min-w-[90%] md:min-w-[500px] max-h-[90vh] overflow-y-auto shadow-2xl">
+      <h2 class="text-center text-3xl font-black italic text-[#009b9d] mb-6">Meu Pedido</h2>
+
+      <div id="cart-items" class="flex flex-col gap-4 mb-6 border-b pb-6"></div>
+
+      <div class="flex justify-between items-center mb-6">
+        <p class="font-bold text-xl text-gray-800">Total:</p>
+        <span id="cart-total" class="font-black text-2xl text-[#009b9d]">R$ 0,00</span>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div>
+          <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Endereço de entrega:</label>
+          <input type="text" placeholder="Rua, número e bairro..." id="address-input"
+            class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
+          <p class="text-red-500 text-xs mt-1 hidden" id="address-warn">Por favor, digite seu endereço completo!</p>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Pagamento:</label>
+            <select id="payment-method"
+              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 bg-white focus:border-[#009b9d] outline-none cursor-pointer">
+              <option value="dinheiro">Dinheiro</option>
+              <option value="pix">Pix</option>
+              <option value="cartao">Cartão na Entrega</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Observação:</label>
+            <input type="text" placeholder="Ex: Troco para R$ 50..."
+              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none" id="obs">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 gap-4">
+        <button id="close-modal-btn"
+          class="flex-1 py-3 font-bold text-gray-500 hover:bg-gray-100 rounded-xl transition-all">
+          Continuar comprando
+        </button>
+        <button id="checkout-btn"
+          class="flex-[2] bg-[#da1d83] text-white font-black py-4 rounded-xl shadow-lg hover:bg-[#c21877] hover:scale-105 transition-all uppercase tracking-widest">
+          Finalizar no WhatsApp
+        </button>
       </div>
     </div>
-    <footer class="w-full h-24 flex items-center justify-center gap-4 bg-[#009b9d] text-white text-sm font-bold">
-      <p>©Farmagente Pompeia. Todos os direitos reservados.</p>
-    </footer>
-    <script type="module" src="/src/main.js"></script>
+  </div>
+  <button id="cart-btn"
+    class="fixed bottom-10 right-6 z-50 bg-[#da1d83] text-white p-4 rounded-full shadow-2xl hover:scale-110 duration-300 flex items-center justify-center group">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+
+    <span id="cart-count"
+      class="absolute -top-1 -right-1 bg-[#009b9d] text-white text-xs font-bold min-w-[22px] h-[22px] flex items-center justify-center rounded-full border-2 border-white">
+      0
+    </span>
+
+    <span
+      class="absolute right-16 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+      Ver carrinho
+    </span>
+  </button>
+  <footer class="w-full h-24 flex items-center justify-center gap-4 bg-[#009b9d] text-white text-sm font-bold">
+    <p>©Farmagente Pompeia. Todos os direitos reservados.</p>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
