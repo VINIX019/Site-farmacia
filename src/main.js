@@ -1,8 +1,19 @@
 import './style.css'
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Não esqueça de importar o CSS!
+
+// Inicialize o AOS
+AOS.init({
+    duration: 800, // Duração da animação (em milissegundos)
+    once: true,    // Se a animação deve acontecer apenas uma vez
+});
+// --- ESTADO DO CARRINHO ---
 let cart = [];
 
-// Seleção de elementos do DOM
+// --- SELEÇÃO DE ELEMENTOS DO DOM ---
 const cartModal = document.getElementById("cart-modal");
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
@@ -10,70 +21,82 @@ const cartBtn = document.getElementById("cart-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCount = document.getElementById("cart-count");
 
-// Inputs de Endereço
+// Inputs de Identificação e Endereço
+const userNameInput = document.getElementById("user-name-input");
+const userPhoneInput = document.getElementById("user-phone-input");
 const addressInput = document.getElementById("address-input");
 const addressNumberInput = document.getElementById("address-number-input");
 const addressNeighborhoodInput = document.getElementById("address-neighborhood-input");
+const addressComplementInput = document.getElementById("address-complement-input");
 
-// Avisos de Validação
-const addressWarn = document.getElementById("address-warn");
-const addressNumberWarn = document.getElementById("address-number-warn");
-const addressNeighborhoodWarn = document.getElementById("address-neighborhood-warn");
-
-// Checkout e Pagamento
+// Checkout e Outros
 const checkoutBtn = document.getElementById("checkout-btn");
 const paymentMethod = document.getElementById("payment-method");
 const obsInput = document.getElementById("obs");
 
-// --- LÓGICA DO MODAL ---
+// --- 1. FUNÇÃO DE NOTIFICAÇÕES (TOASTIFY) ---
+function showToast(text, color = "#da1d83") {
+    Toastify({
+        text: text,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: color,
+            borderRadius: "12px",
+            fontWeight: "bold"
+        },
+    }).showToast();
+}
 
-// Abrir modal
+// --- 2. MÁSCARA DE TELEFONE (19) 99999-9999 ---
+userPhoneInput.addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+    value = value.replace(/(\d{5})(\d)/, "$1-$2");
+    if (value.length > 15) value = value.substring(0, 15);
+    e.target.value = value;
+});
+
+// --- 3. LÓGICA DO MODAL ---
 cartBtn.addEventListener("click", () => {
     updateCartModal();
     cartModal.classList.remove("hidden");
     cartModal.classList.add("flex");
 });
 
-// Fechar modal
-function closeModal() {
+const closeModal = () => {
     cartModal.classList.add("hidden");
     cartModal.classList.remove("flex");
-}
+};
 
 closeModalBtn.addEventListener("click", closeModal);
+cartModal.addEventListener("click", (e) => { if (e.target === cartModal) closeModal(); });
 
-// Fechar ao clicar no fundo
-cartModal.addEventListener("click", (event) => {
-    if (event.target === cartModal) {
-        closeModal();
-    }
-});
+// --- 4. LÓGICA DO CARRINHO ---
 
-// --- LÓGICA DO CARRINHO ---
-
-// Escutador de cliques global para os botões "Adicionar ao Carrinho"
+// Adicionar item
 document.addEventListener("click", (event) => {
     let parentButton = event.target.closest(".add-to-cart-btn");
-
     if (parentButton) {
         const name = parentButton.getAttribute("data-name");
         const price = parseFloat(parentButton.getAttribute("data-price"));
-        addToCart(name, price);
+
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ name, price, quantity: 1 });
+        }
+
+        showToast(`${name} adicionado!`, "#009b9d"); // Verde Farmagente
+        updateCartModal();
     }
 });
 
-function addToCart(name, price) {
-    const existingItem = cart.find(item => item.name === name);
-
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cart.push({ name, price, quantity: 1 });
-    }
-    updateCartModal();
-}
-
-// Atualiza a visualização do carrinho
+// Atualizar visual do carrinho
 function updateCartModal() {
     cartItemsContainer.innerHTML = "";
     let total = 0;
@@ -81,128 +104,94 @@ function updateCartModal() {
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
         cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col", "border-b", "pb-2");
-
         cartItemElement.innerHTML = `
             <div class="flex items-center justify-between font-medium">
                 <div>
                     <p class="text-gray-800 font-bold">${item.name}</p>
-                    <p class="text-sm text-gray-500 italic">Quantidade: ${item.quantity}</p>
+                    <p class="text-sm text-gray-500 italic">Qtd: ${item.quantity}</p>
                     <p class="text-[#009b9d] font-bold">R$ ${item.price.toFixed(2)}</p>
                 </div>
-                <button class="remove-from-cart-btn text-red-500 hover:text-red-700 font-bold" data-name="${item.name}">
+                <button class="remove-btn text-red-500 hover:underline text-sm font-bold" data-name="${item.name}">
                     Remover
                 </button>
             </div>
         `;
-
         total += item.price * item.quantity;
         cartItemsContainer.appendChild(cartItemElement);
     });
 
-    // Formatação de moeda brasileira
     cartTotal.textContent = total.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
     cartCount.innerHTML = cart.reduce((acc, item) => acc + item.quantity, 0);
 }
 
-// Remover item do carrinho
-cartItemsContainer.addEventListener("click", (event) => {
-    if (event.target.classList.contains("remove-from-cart-btn")) {
-        const name = event.target.getAttribute("data-name");
-        removeItemCart(name);
+// Remover item
+cartItemsContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("remove-btn")) {
+        const name = e.target.getAttribute("data-name");
+        const index = cart.findIndex(item => item.name === name);
+        if (index !== -1) {
+            if (cart[index].quantity > 1) cart[index].quantity -= 1;
+            else cart.splice(index, 1);
+            updateCartModal();
+        }
     }
 });
 
-function removeItemCart(name) {
-    const index = cart.findIndex(item => item.name === name);
-    if (index !== -1) {
-        const item = cart[index];
-        if (item.quantity > 1) {
-            item.quantity -= 1;
-        } else {
-            cart.splice(index, 1);
-        }
-        updateCartModal();
-    }
-}
-
-// --- FINALIZAÇÃO DO PEDIDO ---
-
+// --- 5. FINALIZAÇÃO DO PEDIDO (WHATSAPP) ---
 checkoutBtn.addEventListener("click", () => {
-    if (cart.length === 0) return;
-
-    let isValid = true;
-
-    // Validação da Rua
-    if (addressInput.value.trim() === "") {
-        addressWarn.classList.remove("hidden");
-        addressInput.classList.add("border-red-500");
-        isValid = false;
-    } else {
-        addressWarn.classList.add("hidden");
-        addressInput.classList.remove("border-red-500");
+    if (cart.length === 0) {
+        showToast("Seu carrinho está vazio!", "#da1d83");
+        return;
     }
 
-    // Validação do Número
-    if (addressNumberInput.value.trim() === "") {
-        addressNumberWarn.classList.remove("hidden");
-        addressNumberInput.classList.add("border-red-500");
-        isValid = false;
-    } else {
-        addressNumberWarn.classList.add("hidden");
-        addressNumberInput.classList.remove("border-red-500");
+    // Validação de campos
+    if (!userNameInput.value || userPhoneInput.value.length < 14 || !addressInput.value || !addressNumberInput.value) {
+        showToast("Preencha Nome, Telefone e Endereço!", "#da1d83"); // Rosa Farmagente
+        return;
     }
 
-    // Validação do Bairro
-    if (addressNeighborhoodInput.value.trim() === "") {
-        addressNeighborhoodWarn.classList.remove("hidden");
-        addressNeighborhoodInput.classList.add("border-red-500");
-        isValid = false;
-    } else {
-        addressNeighborhoodWarn.classList.add("hidden");
-        addressNeighborhoodInput.classList.remove("border-red-500");
-    }
+    // Gerar resumo dos itens
+    const cartItems = cart.map(item => `• *${item.name}* (Qtd: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`).join("");
 
-    if (!isValid) return;
+    // Formatar Endereço
+    const comp = addressComplementInput.value.trim() ? `\n*Comp:* ${addressComplementInput.value}` : "";
+    const fullAddress = `*Rua:* ${addressInput.value}, ${addressNumberInput.value}${comp}\n*Bairro:* ${addressNeighborhoodInput.value}`;
 
-    // Formatação da lista de produtos para o WhatsApp
-    const cartItems = cart.map((item) => {
-        return `• *${item.name}* \n   Qtd: ${item.quantity} | Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n`;
-    }).join("\n");
-
-    const fullAddress = `Rua: ${addressInput.value}, Nº: ${addressNumberInput.value} - Bairro: ${addressNeighborhoodInput.value}`;
-
-    // Link do WhatsApp
+    // Mensagem Final
     const message = encodeURIComponent(
         `🛍️ *NOVO PEDIDO - FARMAGENTE POMPEIA*\n\n` +
-        `📦 *ITENS DO PEDIDO:*\n${cartItems}\n` +
-        `💰 *TOTAL: ${cartTotal.textContent}*\n\n` +
-        `📍 *ENDEREÇO DE ENTREGA:*\n${fullAddress}\n\n` +
-        `💳 *FORMA DE PAGAMENTO:* ${paymentMethod.value.toUpperCase()}\n` +
-        `💬 *OBSERVAÇÃO:* ${obsInput.value || "Nenhuma"}`
+        `👤 *CLIENTE:* ${userNameInput.value}\n` +
+        `📞 *FONE:* ${userPhoneInput.value}\n\n` +
+        `📝 *ITENS:*\n${cartItems}\n` +
+        `💰 *TOTAL: ${cartTotal.textContent}*\n` +
+        `⚠️ _Sujeito a taxa de entrega_\n\n` +
+        `📍 *ENTREGA:* ${fullAddress}\n` +
+        `💳 *PAGAMENTO:* ${paymentMethod.value.toUpperCase()}\n` +
+        `💬 *OBS:* ${obsInput.value || "Nenhuma"}\n\n` +
+        `📸 *IMPORTANTE:* Vou anexar a foto da receita logo abaixo desta mensagem!`
     );
 
-    const phone = "5519989776179";
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    window.open(`https://wa.me/5519989776179?text=${message}`, "_blank");
 
-    // Resetar tudo após o envio
+    // Limpar tudo após sucesso
     cart = [];
     updateCartModal();
     closeModal();
-    // Limpar campos de endereço
-    addressInput.value = "";
-    addressNumberInput.value = "";
-    addressNeighborhoodInput.value = "";
-    obsInput.value = "";
+    [userNameInput, userPhoneInput, addressInput, addressNumberInput, addressNeighborhoodInput, addressComplementInput, obsInput].forEach(i => i.value = "");
 });
 
-// Remove bordas vermelhas ao começar a digitar
-[addressInput, addressNumberInput, addressNeighborhoodInput].forEach(input => {
-    input.addEventListener("input", () => {
-        input.classList.remove("border-red-500");
-        // Esconde o aviso de erro mais próximo (irmão do input)
-        const warn = input.id === "address-input" ? addressWarn :
-            input.id === "address-number-input" ? addressNumberWarn :
-                addressNeighborhoodWarn;
-        warn.classList.add("hidden");
-    });
-});
+// --- 6. LÓGICA DOS CARROSSÉIS ---
+function setupCarousel(carouselId, prevBtnId, nextBtnId) {
+    const carousel = document.getElementById(carouselId);
+    const prev = document.getElementById(prevBtnId);
+    const next = document.getElementById(nextBtnId);
+
+    if (carousel && prev && next) {
+        next.addEventListener("click", () => carousel.scrollLeft += 350);
+        prev.addEventListener("click", () => carousel.scrollLeft -= 350);
+    }
+}
+
+// Inicia carrosséis de Medicamentos e Dermocosméticos
+setupCarousel("carousel", "prev-btn", "next-btn");
+setupCarousel("carousel-dermo", "prev-dermo", "next-dermo");

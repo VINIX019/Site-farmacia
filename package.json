@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
-    "tailwindcss": "^4.1.18"
+    "aos": "^2.3.4",
+    "tailwindcss": "^4.1.18",
+    "toastify-js": "^1.12.0"
   }
 }
