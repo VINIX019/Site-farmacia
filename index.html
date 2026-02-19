@@ -600,21 +600,16 @@
             </div>
           </div>
         </div>
-        <div class="mt-6 p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
-          <p class="text-[11px] text-gray-500 text-center mb-3 uppercase font-bold tracking-wider">Possui
-            medicamento
-            com
-            receita?</p>
-          <a href="https://wa.me/5519989776179?text=Olá! Tenho uma receita e gostaria de incluir no meu pedido."
-            target="_blank"
-            class="w-full py-2 flex items-center justify-center gap-2 text-[#009b9d] font-bold text-sm border border-[#009b9d] rounded-lg hover:bg-[#009b9d] hover:text-white transition-all no-underline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-              <circle cx="12" cy="13" r="4" />
-            </svg>
-            Anexar receita no Zap
-          </a>
+        <div class="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="checkbox" id="has-prescription" class="w-5 h-5 accent-[#da1d83]">
+            <span class="text-sm text-gray-700 font-medium">
+              Possuo medicamento com receita (Vou anexar foto)
+            </span>
+          </label>
+          <p class="text-[11px] text-gray-500 mt-1 ml-8">
+            Marque esta opção se houver medicamentos controlados ou antibióticos.
+          </p>
         </div>
         <div class="flex items-center justify-between mt-8 gap-4">
           <button id="close-modal-btn"
@@ -745,7 +740,8 @@
               <span class="text-[#da1d83] group-open:rotate-180 transition-transform">▼</span>
             </summary>
             <div class="text-gray-500 mt-3 text-sm space-y-2">
-              <p><strong>Loja Física:</strong> Segunda a Sexta: 08h às 21h | Sábado: 08h às 20h | Domingo: 08h às 13h</p>
+              <p><strong>Loja Física:</strong> Segunda a Sexta: 08h às 21h | Sábado: 08h às 20h | Domingo: 08h às 13h
+              </p>
               <p><strong>Pedidos Online:</strong> Você pode enviar sua lista a qualquer momento! Pedidos feitos fora do
                 horário comercial serão processados logo na abertura da loja no dia seguinte.</p>
             </div>

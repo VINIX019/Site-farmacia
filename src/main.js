@@ -20,6 +20,7 @@ const cartTotal = document.getElementById("cart-total");
 const cartBtn = document.getElementById("cart-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCount = document.getElementById("cart-count");
+const hasPrescriptionCheckbox = document.getElementById("has-prescription");
 
 // Inputs de Identificação e Endereço
 const userNameInput = document.getElementById("user-name-input");
@@ -165,18 +166,22 @@ checkoutBtn.addEventListener("click", () => {
     const comp = addressComplementInput.value.trim() ? `\n*Comp:* ${addressComplementInput.value}` : "";
     const fullAddress = `*Rua:* ${addressInput.value}, ${addressNumberInput.value}${comp}\n*Bairro:* ${addressNeighborhoodInput.value}`;
 
-    // Mensagem Final
+    // Verifica se o checkbox de receita está marcado
+    const prescriptionText = hasPrescriptionCheckbox.checked
+        ? `\n\n*IMPORTANTE:* Vou anexar a foto da receita logo abaixo desta mensagem!`
+        : "";
+
     const message = encodeURIComponent(
-        `🛍️ *NOVO PEDIDO - FARMAGENTE POMPEIA*\n\n` +
-        `👤 *CLIENTE:* ${userNameInput.value}\n` +
-        `📞 *FONE:* ${userPhoneInput.value}\n\n` +
-        `📝 *ITENS:*\n${cartItems}\n` +
-        `💰 *TOTAL: ${cartTotal.textContent}*\n` +
-        `⚠️ _Sujeito a taxa de entrega_\n\n` +
-        `📍 *ENTREGA:* ${fullAddress}\n` +
-        `💳 *PAGAMENTO:* ${paymentMethod.value.toUpperCase()}\n` +
-        `💬 *OBS:* ${obsInput.value || "Nenhuma"}\n\n` +
-        `📸 *IMPORTANTE:* Vou anexar a foto da receita logo abaixo desta mensagem!`
+        `*PEDIDO - FARMAGENTE POMPEIA*\n\n` +
+        `*CLIENTE:* ${userNameInput.value}\n` +
+        `*FONE:* ${userPhoneInput.value}\n\n` +
+        `*ITENS:*\n${cartItems}\n` +
+        `*TOTAL: ${cartTotal.textContent}*\n` +
+        `_Sujeito a taxa de entrega_\n\n` +
+        `*ENTREGA:* ${fullAddress}\n` +
+        `*PAGAMENTO:* ${paymentMethod.value.toUpperCase()}\n` +
+        `*OBS:* ${obsInput.value || "Nenhuma"}` +
+        prescriptionText // Aqui ele adiciona o aviso ou fica vazio
     );
 
     window.open(`https://wa.me/5519989776179?text=${message}`, "_blank");
@@ -200,6 +205,7 @@ function setupCarousel(carouselId, prevBtnId, nextBtnId) {
     }
 }
 
+hasPrescriptionCheckbox.checked = false;
 // Inicia carrosséis de Medicamentos e Dermocosméticos
 setupCarousel("carousel", "prev-btn", "next-btn");
 setupCarousel("carousel-dermo", "prev-dermo", "next-dermo");
