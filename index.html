@@ -12,14 +12,32 @@
 </head>
 
 <body>
-  <div id="nav-bar" class="w-full h-24 flex items-center px-8 bg-white shadow-sm gap-8 fixed z-50">
-    <a href="index.html"><img src="/assets/redefarmagente_logo.png" alt="Logo"
-        class="w-[160px] md:w-[220px] h-auto object-contain block"></a>
+  <nav id="nav-bar"
+    class="w-full h-20 md:h-24 flex items-center justify-between px-4 md:px-8 bg-white shadow-sm fixed top-0 left-0 z-50">
 
-    <a href="#Promocoes" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold ml-auto">Promoções</a>
-    <a href="#Quemsomos" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold">Quem somos</a>
-    <a href="#Contato" class="text-[#009b9d] hover:text-[#da1d83] duration-250 font-bold">Contato</a>
-  </div>
+    <a href="#top" class="flex-shrink-0">
+      <img src="/assets/redefarmagente_logo.png" alt="Logo"
+        class="w-[140px] sm:w-[160px] md:w-[220px] h-auto object-contain">
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#Promocoes"
+        class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Promoções</a>
+      <a href="#Quemsomos" class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Quem
+        somos</a>
+      <a href="#Contato"
+        class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Contato</a>
+    </div>
+
+    <div class="md:hidden">
+      <a href="#Contato" class="bg-[#009b9d] text-white px-4 py-2 rounded-full text-xs font-bold">
+        Falar no Zap
+      </a>
+    </div>
+
+  </nav>
+
+  <div class="h-20 md:h-24"></div>
   <div id="Promocoes" class="w-full py-20 bg-white">
     <div class="container mx-auto px-8">
 

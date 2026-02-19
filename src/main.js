@@ -34,6 +34,14 @@ const checkoutBtn = document.getElementById("checkout-btn");
 const paymentMethod = document.getElementById("payment-method");
 const obsInput = document.getElementById("obs");
 
+
+document.querySelector('a[href="#top"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 // --- 1. FUNÇÃO DE NOTIFICAÇÕES (TOASTIFY) ---
 function showToast(text, color = "#da1d83") {
     Toastify({
