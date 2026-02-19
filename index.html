@@ -16,7 +16,7 @@
   <body id="top">
 
     <nav id="nav-bar"
-      class="w-full h-20 md:h-24 flex items-center justify-between px-4 md:px-8 bg-white shadow-sm fixed top-0 left-0 z-50">
+      class="w-full h-20 md:h-24 flex items-center justify-between px-4 md:px-8 bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 z-50">
 
       <a href="#top" class="flex-shrink-0 transition-transform active:scale-95">
         <img src="/assets/redefarmagente_logo.png" alt="Logo"
@@ -35,9 +35,10 @@
           class="bg-[#da1d83] text-white p-2.5 rounded-full shadow-md flex items-center justify-center transition-transform active:scale-90"
           aria-label="Promoções">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M7 7h.01" />
-            <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a6 6 0 0 1 8.49 8.49Z" />
+            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="5" x2="5" y2="19"></line>
+            <circle cx="6.5" cy="6.5" r="2.5"></circle>
+            <circle cx="17.5" cy="17.5" r="2.5"></circle>
           </svg>
         </a>
 
@@ -66,7 +67,9 @@
             <div class="h-1.5 w-20 bg-[#da1d83] rounded-full"></div>
           </div>
           <p class="text-gray-500 max-w-md">
-            Arraste para o lado para conferir mais ofertas. Aproveite nossa entrega rápida na Pompeia!
+            Arraste para o lado para conferir mais ofertas. Aproveite nossa entrega rápida na Vila Pompeia!
+            <span class="block mt-1 text-[#da1d83] font-semibold text-sm">*Ofertas válidas enquanto durarem os
+              estoques.</span>
           </p>
         </div>
 
@@ -644,6 +647,7 @@
         Ver carrinho
       </span>
     </button>
+
     <section id="depoimentos" class="py-16 bg-white overflow-hidden">
       <div class="container mx-auto px-4">
 
@@ -729,8 +733,115 @@
 
       </div>
     </section>
-    <footer class="w-full h-24 flex items-center justify-center gap-4 bg-[#009b9d] text-white text-sm font-bold">
-      <p>©Farmagente Pompeia. Todos os direitos reservados.</p>
+    <section class="w-full py-16 bg-white">
+      <div class="container mx-auto px-8 max-w-3xl">
+        <h2 class="text-2xl font-black text-[#009b9d] mb-8 text-center uppercase">Dúvidas Frequentes</h2>
+
+        <div class="space-y-4">
+          <details
+            class="group border border-gray-100 rounded-2xl p-4 cursor-pointer bg-gray-50 hover:bg-white transition-all">
+            <summary class="font-bold text-gray-700 list-none flex justify-between items-center">
+              Qual o horário de funcionamento e entregas?
+              <span class="text-[#da1d83] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="text-gray-500 mt-3 text-sm space-y-2">
+              <p><strong>Loja Física:</strong> Segunda a Sexta: 08h às 21h | Sábado: 08h às 20h | Domingo: 08h às 13h</p>
+              <p><strong>Pedidos Online:</strong> Você pode enviar sua lista a qualquer momento! Pedidos feitos fora do
+                horário comercial serão processados logo na abertura da loja no dia seguinte.</p>
+            </div>
+          </details>
+          <details class="group border border-gray-100 rounded-2xl p-4 cursor-pointer">
+            <summary class="font-bold text-gray-700 list-none flex justify-between items-center">
+              Qual o tempo de entrega na Pompeia?
+              <span class="text-[#da1d83] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="text-gray-500 mt-3 text-sm">Entregamos em média entre 30 a 60 minutos após a confirmação do pedido
+              pelo WhatsApp.</p>
+          </details>
+
+          <details class="group border border-gray-100 rounded-2xl p-4 cursor-pointer">
+            <summary class="font-bold text-gray-700 list-none flex justify-between items-center">
+              Como envio minha receita?
+              <span class="text-[#da1d83] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="text-gray-500 mt-3 text-sm">Basta clicar no botão do WhatsApp e enviar uma foto nítida da sua
+              receita médica.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <footer class="w-full bg-gray-50 pt-16 pb-8 border-t border-gray-200">
+      <div class="container mx-auto px-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+          <div class="flex flex-col gap-4">
+            <img src="/assets/redefarmagente_logo.png" alt="Logo" class="w-40 h-auto">
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Cuidando da saúde da sua família na Pompeia com dedicação, preços baixos e entrega rápida.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="font-bold text-[#009b9d] uppercase text-sm">Navegação</h4>
+            <ul class="flex flex-col gap-2 text-gray-600 text-sm">
+              <li><a href="#top" class="hover:text-[#da1d83] transition">Início</a></li>
+              <li><a href="#Promocoes" class="hover:text-[#da1d83] transition">Promoções</a></li>
+              <li><a href="#Quemsomos" class="hover:text-[#da1d83] transition">Quem Somos</a></li>
+              <li><a href="#Contato" class="hover:text-[#da1d83] transition">Contato</a></li>
+            </ul>
+          </div>
+
+          <div id="Contato" class="flex flex-col gap-4">
+            <h4 class="font-bold text-[#009b9d] uppercase text-sm">Atendimento</h4>
+            <div class="flex flex-col gap-3 text-sm text-gray-600">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" class="text-[#da1d83]">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                (19) 98977-6179
+              </p>
+              <p class="flex items-center gap-2 text-xs">
+                📍 Av. Mirandopolis, 160 - Vila Pompeia, Campinas/SP
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-bold text-[#009b9d] uppercase text-sm">Atendimento</h4>
+            <div class="flex flex-col gap-3 text-sm text-gray-600">
+              <p class="flex items-start gap-2">
+                <span class="text-[#da1d83]">⏰</span>
+                <span>
+                  <strong>Seg à Sex:</strong> 08h às 21h<br>
+                  <strong>Sábados:</strong> 08h às 20h<br>
+                  <strong>Domingos:</strong> 08h às 13h
+                </span>
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-[#da1d83]">📞</span>
+                (19) 98977-6179
+              </p>
+              <p class="text-[11px] text-gray-400 mt-2 italic">
+                *Pedidos após o horário serão respondidos no dia seguinte.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-200 mb-8">
+
+        <div class="text-[10px] text-gray-400 leading-relaxed text-center md:text-left">
+          <p class="mb-2"><strong>Razão Social:</strong> NOME DA SUA EMPRESA LTDA | <strong>CNPJ:</strong>
+            00.000.000/0001-00</p>
+          <p class="mb-2"><strong>Farmacêutico Responsável:</strong> Nome do Farmacêutico - CRF/SP: 00000</p>
+          <p class="mb-4">As informações contidas neste site não devem ser usadas para automedicação e não substituem,
+            em hipótese alguma, as orientações dadas pelo profissional da área médica.</p>
+          <p>© 2026 Rede Farmagente Pompeia. Todos os direitos reservados.</p>
+        </div>
+
+      </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
