@@ -12,707 +12,715 @@
 </head>
 
 <body>
-  <nav id="nav-bar"
-    class="w-full h-20 md:h-24 flex items-center justify-between px-4 md:px-8 bg-white shadow-sm fixed top-0 left-0 z-50">
 
-    <a href="#top" class="flex-shrink-0">
-      <img src="/assets/redefarmagente_logo.png" alt="Logo"
-        class="w-[140px] sm:w-[160px] md:w-[220px] h-auto object-contain">
-    </a>
+  <body id="top">
 
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#Promocoes"
-        class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Promoções</a>
-      <a href="#Quemsomos" class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Quem
-        somos</a>
-      <a href="#Contato"
-        class="text-[#009b9d] hover:text-[#da1d83] transition-colors duration-300 font-bold">Contato</a>
-    </div>
+    <nav id="nav-bar"
+      class="w-full h-20 md:h-24 flex items-center justify-between px-4 md:px-8 bg-white shadow-sm fixed top-0 left-0 z-50">
 
-    <div class="md:hidden">
-      <a href="#Contato" class="bg-[#009b9d] text-white px-4 py-2 rounded-full text-xs font-bold">
-        Falar no Zap
+      <a href="#top" class="flex-shrink-0 transition-transform active:scale-95">
+        <img src="/assets/redefarmagente_logo.png" alt="Logo"
+          class="w-[150px] md:w-[220px] h-auto object-contain block">
       </a>
-    </div>
 
-  </nav>
-
-  <div class="h-20 md:h-24"></div>
-  <div id="Promocoes" class="w-full py-20 bg-white">
-    <div class="container mx-auto px-8">
-
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-        <div class="flex flex-col gap-2">
-          <span class="text-[#da1d83] font-bold uppercase tracking-widest text-sm">Ofertas do Mês</span>
-          <h2 class="italic text-[#009b9d] font-black text-4xl">Promoções em Destaque</h2>
-          <div class="h-1.5 w-20 bg-[#da1d83] rounded-full"></div>
-        </div>
-        <p class="text-gray-500 max-w-md">
-          Arraste para o lado para conferir mais ofertas. Aproveite nossa entrega rápida na Pompeia!
-        </p>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#Promocoes" class="text-[#009b9d] hover:text-[#da1d83] duration-300 font-bold">Promoções</a>
+        <a href="#Quemsomos" class="text-[#009b9d] hover:text-[#da1d83] duration-300 font-bold">Quem somos</a>
+        <a href="#Contato" class="text-[#009b9d] hover:text-[#da1d83] duration-300 font-bold">Contato</a>
       </div>
 
-      <div class="relative group">
-        <button id="prev-btn"
-          class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#009b9d] hover:bg-[#009b9d] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-        </button>
+      <div class="md:hidden flex items-center gap-3">
+        <a href="#Promocoes"
+          class="bg-[#da1d83] text-white p-2.5 rounded-full shadow-md transition-transform active:scale-90">
+          <i class="fa-solid fa-tag text-lg"></i>
+        </a>
 
-        <div id="carousel" class="flex overflow-x-auto gap-6 scroll-smooth no-scrollbar pb-10">
-
-          <div
-            class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <img src="/assets/lorasliv.webp" alt="Lorasliv"
-                class="max-h-full w-auto object-contain group-hover/card:scale-110 duration-500">
-              <div
-                class="absolute top-4 right-4 bg-[#da1d83] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                -50% OFF</div>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Medicamentos</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Lorasliv 100mg</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-gray-400 line-through text-sm">R$ 19,90</span>
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 9,99</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Lorasliv 100mg" data-price="9.99">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
-                class="text-5xl">💊</span></div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
-                class="text-5xl">💊</span></div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
-                class="text-5xl">💊</span></div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
-                class="text-5xl">💊</span></div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <button id="next-btn"
-          class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#009b9d] hover:bg-[#009b9d] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full py-20 bg-gray-50">
-    <div class="container mx-auto px-8">
-
-      <div class="flex flex-col gap-2 mb-12 text-center md:text-left">
-        <h2 class="italic text-[#009b9d] font-black text-4xl">Promoções Dermocosméticos</h2>
-        <div class="h-1.5 w-20 bg-[#da1d83] rounded-full mx-auto md:mx-0"></div>
+        <a href="https://wa.me/5519989776179"
+          class="bg-[#009b9d] text-white p-2.5 rounded-full shadow-md animate-pulse active:scale-90">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+        </a>
       </div>
 
-      <div class="relative group">
-        <button id="prev-dermo"
-          class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#da1d83] hover:bg-[#da1d83] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-        </button>
+    </nav>
 
-        <div id="carousel-dermo" class="flex overflow-x-auto gap-8 scroll-smooth no-scrollbar pb-10 px-2">
-
-          <div
-            class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <span class="text-5xl">✨</span>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <span class="text-5xl">✨</span>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <span class="text-5xl">✨</span>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <span class="text-5xl">✨</span>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
-              <span class="text-5xl">✨</span>
-            </div>
-            <div class="p-6 flex flex-col grow gap-2">
-              <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
-              <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
-              <div class="mt-auto pt-4">
-                <div class="flex items-center gap-2 mb-4">
-                  <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
-                </div>
-                <button
-                  class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
-                  data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <button id="next-dermo"
-          class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#da1d83] hover:bg-[#da1d83] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="Quemsomos" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
-
-      <div class="w-full md:w-1/2">
-        <div class="rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 duration-500">
-          <img src="/assets/Farmagente pompeia.jpg" alt="Nossa Unidade" class="w-full h-96 object-cover">
-        </div>
-      </div>
-
-      <div class="w-full md:w-1/2 flex flex-col gap-6">
-        <h2 class="text-[#009b9d] text-4xl font-black italic">Tradição e Cuidado na Pompeia</h2>
-
-        <p class="text-gray-600 text-lg leading-relaxed">
-          A <span class="font-bold text-[#da1d83]">Farmagente Pompeia</span> nasceu com o propósito de ser
-          mais do
-          que
-          apenas uma farmácia, mas um ponto de apoio para a saúde da nossa comunidade.
-        </p>
-
-        <p class="text-gray-600 text-lg leading-relaxed">
-          Contamos com uma equipe de farmacêuticos experientes e uma logística de entrega que garante que seu
-          medicamento chegue em minutos. Valorizamos o atendimento humano, aquele onde conhecemos nossos
-          clientes
-          pelo
-          nome.
-        </p>
-
-        <div class="flex gap-6 mt-4">
-          <div class="flex flex-col items-center">
-            <span class="text-3xl">💊</span>
-            <span class="text-xs font-bold text-[#009b9d]">Procedência</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="text-3xl">⚡</span>
-            <span class="text-xs font-bold text-[#009b9d]">Entrega Ágil</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="text-3xl">👨‍⚕️</span>
-            <span class="text-xs font-bold text-[#009b9d]">Funcionários Especializados</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="farmacia-popular">
-    <div class="w-full py-12 bg-white">
-      <div class="container mx-auto px-8">
-        <div
-          class="bg-red-50 border-l-8 border-[#009b9d] rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
-
-          <div class="w-full md:w-2/3 flex flex-col gap-6">
-            <div class="flex items-center gap-3">
-              <span class="bg-[#009b9d] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                Convênio Federal
-              </span>
-              <h2 class="text-[#009b9d] text-4xl font-black italic">Aqui tem Farmácia Popular</h2>
-            </div>
-
-            <p class="text-gray-700 text-lg leading-relaxed">
-              Garantimos o acesso a medicamentos essenciais com descontos de até
-              <span class="font-bold text-[#009b9d]">100%</span>.
-              Traga sua receita médica e documento com foto para retirar seus medicamentos para diabetes,
-              hipertensão
-              e
-              asma de forma gratuita.
-            </p>
-
-            <div class="flex flex-wrap gap-4 mt-2">
-              <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Diabetes</span>
-              <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Hipertensão</span>
-              <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Asma</span>
-              <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Fralda Geriátrica</span>
-            </div>
-
-            <div class="flex justify-start mt-2">
-              <a href="https://wa.me/5519989776179?text=Olá! Gostaria de saber mais sobre os medicamentos da Farmácia Popular."
-                target="_blank"
-                class="bg-[#009b9d] text-white font-bold py-3 px-8 rounded-full hover:bg-[#007a7c] hover:scale-105 duration-300 shadow-md flex items-center justify-center gap-3 no-underline w-fit">
-                Saiba mais
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-1/3">
-            <img src="/assets/logo_farmacia_popular.webp" alt="Farmácia Popular"
-              class="w-24 h-auto object-cover rounded-lg shadow-md hover:scale-105 duration-300 ">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="convenios">
-    <div class="w-full py-16 bg-gray-50">
+    <div class="h-20 md:h-24"></div>
+    <div id="Promocoes" class="w-full py-20 bg-white">
       <div class="container mx-auto px-8">
 
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div class="flex flex-col gap-2">
-            <h2 class="italic text-[#009b9d] font-black text-4xl">Convênios</h2>
-            <div class="h-1 w-20 bg-[#da1d83] rounded-full"></div>
-            <p class="text-gray-600 mt-2">Aceitamos diversos convênios e planos de saúde para facilitar sua
-              compra.
-            </p>
+            <span class="text-[#da1d83] font-bold uppercase tracking-widest text-sm">Ofertas do Mês</span>
+            <h2 class="italic text-[#009b9d] font-black text-4xl">Promoções em Destaque</h2>
+            <div class="h-1.5 w-20 bg-[#da1d83] rounded-full"></div>
           </div>
-
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-
-            <div
-              class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
-              <span class="font-bold text-gray-400"><IMG src="/assets/logo aspmc.webp" alt="Convênio 1"
-                  class="max-h-full max-w-full object-contain"></IMG></span>
-            </div>
-
-            <div
-              class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
-              <span class="font-bold text-gray-400"><IMG src="/assets/sanasa logo.webp" alt="Convênio 2"
-                  class="max-h-full max-w-full object-contain"></IMG></span>
-            </div>
-
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div id="Contato" class="w-full py-10 bg-white">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-stretch justify-center gap-6">
-
-      <div
-        class="bg-[#009b9d] w-full md:max-w-112.5 rounded-3xl flex flex-col gap-6 p-8 md:p-10 items-center text-center shadow-xl">
-
-        <div class="flex flex-col gap-2">
-          <h3 class="text-white text-2xl md:text-3xl font-bold leading-tight">
-            Entre em contato conosco
-          </h3>
-          <p class="text-white/80 text-sm">
-            Dúvidas ou pedidos? Nossa equipe está pronta para te atender.
+          <p class="text-gray-500 max-w-md">
+            Arraste para o lado para conferir mais ofertas. Aproveite nossa entrega rápida na Pompeia!
           </p>
         </div>
 
-        <div class="flex flex-col gap-3 w-full items-center">
-          <a href="https://wa.me/5519989776179?text=Olá! Gostaria de fazer um pedido." target="_blank"
-            class="bg-[#da1d83] text-white font-bold py-4 px-8 rounded-full hover:bg-[#c21877] hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 no-underline">
-            Enviar mensagem
-          </a>
+        <div class="relative group">
+          <button id="prev-btn"
+            class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#009b9d] hover:bg-[#009b9d] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
 
-          <a href="https://wa.me/5519989776179?text=Olá! Vou enviar a foto da minha receita para orçamento."
+          <div id="carousel" class="flex overflow-x-auto gap-6 scroll-smooth no-scrollbar pb-10">
+
+            <div
+              class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <img src="/assets/lorasliv.webp" alt="Lorasliv"
+                  class="max-h-full w-auto object-contain group-hover/card:scale-110 duration-500">
+                <div
+                  class="absolute top-4 right-4 bg-[#da1d83] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  -50% OFF</div>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Medicamentos</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Lorasliv 100mg</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-gray-400 line-through text-sm">R$ 19,90</span>
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 9,99</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Lorasliv 100mg" data-price="9.99">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
+                  class="text-5xl">💊</span></div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
+                  class="text-5xl">💊</span></div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
+                  class="text-5xl">💊</span></div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[320px] group/card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6"><span
+                  class="text-5xl">💊</span></div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Saúde</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vitamina C 1g</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-gray-400 line-through text-sm">R$ 25,00</span>
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 14,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vitamina C 1g" data-price="14.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <button id="next-btn"
+            class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#009b9d] hover:bg-[#009b9d] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full py-20 bg-gray-50">
+      <div class="container mx-auto px-8">
+
+        <div class="flex flex-col gap-2 mb-12 text-center md:text-left">
+          <h2 class="italic text-[#009b9d] font-black text-4xl">Promoções Dermocosméticos</h2>
+          <div class="h-1.5 w-20 bg-[#da1d83] rounded-full mx-auto md:mx-0"></div>
+        </div>
+
+        <div class="relative group">
+          <button id="prev-dermo"
+            class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#da1d83] hover:bg-[#da1d83] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div id="carousel-dermo" class="flex overflow-x-auto gap-8 scroll-smooth no-scrollbar pb-10 px-2">
+
+            <div
+              class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <span class="text-5xl">✨</span>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <span class="text-5xl">✨</span>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <span class="text-5xl">✨</span>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <span class="text-5xl">✨</span>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[280px] md:min-w-[300px] group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden h-64 bg-gray-50 flex items-center justify-center p-6">
+                <span class="text-5xl">✨</span>
+              </div>
+              <div class="p-6 flex flex-col grow gap-2">
+                <span class="text-gray-400 text-xs font-bold uppercase">Higiene & Beleza</span>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Vichy Mineral 89</h3>
+                <div class="mt-auto pt-4">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-[#009b9d] font-black text-2xl">R$ 99,90</span>
+                  </div>
+                  <button
+                    class="add-to-cart-btn w-full bg-[#009b9d] text-white font-bold py-3 rounded-xl hover:bg-[#da1d83] transition-all"
+                    data-name="Vichy Mineral 89" data-price="99.90">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <button id="next-dermo"
+            class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-xl text-[#da1d83] hover:bg-[#da1d83] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex border border-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="Quemsomos" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
+
+        <div class="w-full md:w-1/2">
+          <div class="rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 duration-500">
+            <img src="/assets/Farmagente pompeia.jpg" alt="Nossa Unidade" class="w-full h-96 object-cover">
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex flex-col gap-6">
+          <h2 class="text-[#009b9d] text-4xl font-black italic">Tradição e Cuidado na Pompeia</h2>
+
+          <p class="text-gray-600 text-lg leading-relaxed">
+            A <span class="font-bold text-[#da1d83]">Farmagente Pompeia</span> nasceu com o propósito de ser
+            mais do
+            que
+            apenas uma farmácia, mas um ponto de apoio para a saúde da nossa comunidade.
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed">
+            Contamos com uma equipe de farmacêuticos experientes e uma logística de entrega que garante que seu
+            medicamento chegue em minutos. Valorizamos o atendimento humano, aquele onde conhecemos nossos
+            clientes
+            pelo
+            nome.
+          </p>
+
+          <div class="flex gap-6 mt-4">
+            <div class="flex flex-col items-center">
+              <span class="text-3xl">💊</span>
+              <span class="text-xs font-bold text-[#009b9d]">Procedência</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-3xl">⚡</span>
+              <span class="text-xs font-bold text-[#009b9d]">Entrega Ágil</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-3xl">👨‍⚕️</span>
+              <span class="text-xs font-bold text-[#009b9d]">Funcionários Especializados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="farmacia-popular">
+      <div class="w-full py-12 bg-white">
+        <div class="container mx-auto px-8">
+          <div
+            class="bg-red-50 border-l-8 border-[#009b9d] rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+
+            <div class="w-full md:w-2/3 flex flex-col gap-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="bg-[#009b9d] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                  Convênio Federal
+                </span>
+                <h2 class="text-[#009b9d] text-4xl font-black italic">Aqui tem Farmácia Popular</h2>
+              </div>
+
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Garantimos o acesso a medicamentos essenciais com descontos de até
+                <span class="font-bold text-[#009b9d]">100%</span>.
+                Traga sua receita médica e documento com foto para retirar seus medicamentos para diabetes,
+                hipertensão
+                e
+                asma de forma gratuita.
+              </p>
+
+              <div class="flex flex-wrap gap-4 mt-2">
+                <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Diabetes</span>
+                <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Hipertensão</span>
+                <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Asma</span>
+                <span class="flex items-center gap-2 text-sm font-bold text-gray-600">✅ Fralda Geriátrica</span>
+              </div>
+
+              <div class="flex justify-start mt-2">
+                <a href="https://wa.me/5519989776179?text=Olá! Gostaria de saber mais sobre os medicamentos da Farmácia Popular."
+                  target="_blank"
+                  class="bg-[#009b9d] text-white font-bold py-3 px-8 rounded-full hover:bg-[#007a7c] hover:scale-105 duration-300 shadow-md flex items-center justify-center gap-3 no-underline w-fit">
+                  Saiba mais
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3">
+              <img src="/assets/logo_farmacia_popular.webp" alt="Farmácia Popular"
+                class="w-24 h-auto object-cover rounded-lg shadow-md hover:scale-105 duration-300 ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="convenios">
+      <div class="w-full py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+              <h2 class="italic text-[#009b9d] font-black text-4xl">Convênios</h2>
+              <div class="h-1 w-20 bg-[#da1d83] rounded-full"></div>
+              <p class="text-gray-600 mt-2">Aceitamos diversos convênios e planos de saúde para facilitar sua
+                compra.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+
+              <div
+                class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
+                <span class="font-bold text-gray-400"><IMG src="/assets/logo aspmc.webp" alt="Convênio 1"
+                    class="max-h-full max-w-full object-contain"></IMG></span>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md duration-300">
+                <span class="font-bold text-gray-400"><IMG src="/assets/sanasa logo.webp" alt="Convênio 2"
+                    class="max-h-full max-w-full object-contain"></IMG></span>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="Contato" class="w-full py-10 bg-white">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-stretch justify-center gap-6">
+
+        <div
+          class="bg-[#009b9d] w-full md:max-w-112.5 rounded-3xl flex flex-col gap-6 p-8 md:p-10 items-center text-center shadow-xl">
+
+          <div class="flex flex-col gap-2">
+            <h3 class="text-white text-2xl md:text-3xl font-bold leading-tight">
+              Entre em contato conosco
+            </h3>
+            <p class="text-white/80 text-sm">
+              Dúvidas ou pedidos? Nossa equipe está pronta para te atender.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3 w-full items-center">
+            <a href="https://wa.me/5519989776179?text=Olá! Gostaria de fazer um pedido." target="_blank"
+              class="bg-[#da1d83] text-white font-bold py-4 px-8 rounded-full hover:bg-[#c21877] hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 no-underline">
+              Enviar mensagem
+            </a>
+
+            <a href="https://wa.me/5519989776179?text=Olá! Vou enviar a foto da minha receita para orçamento."
+              target="_blank"
+              class="bg-white text-[#009b9d] font-bold py-4 px-8 rounded-full hover:bg-gray-50 hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 border-2 border-[#009b9d] no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+              Enviar Receita (Foto)
+            </a>
+          </div>
+
+          <div class="w-full flex flex-col gap-2">
+            <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Como chegar</p>
+            <div class="flex gap-3">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Farma+Gente+Pompeia+Campinas" target="_blank"
+                class="flex-1 bg-white text-[#009b9d] font-bold py-3 rounded-xl active:bg-gray-100 duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg"
+                  class="h-4 w-auto" alt="">
+                Maps
+              </a>
+              <a href="https://www.waze.com/live-map/directions?to=ll.-22.929828%2C-47.087135" target="_blank"
+                class="flex-1 bg-[#33ccff] text-white font-bold py-3 rounded-xl active:bg-[#2bb5e0] duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105 ">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 512 512">
+                  <path
+                    d="M447.5 282.8c-1.3-46.3-21.5-88-56.9-117.2c-35-28.9-81.2-44.4-130-43.6c-48.8.8-94.2 18.5-127.9 49.8c-32.5 30.1-49.9 71.3-49.1 115.8c.4 20.3 4.2 39.8 11.1 57.8l-15.6 34.6c-2.4 5.3-1.1 11.5 3.3 15.4c2.8 2.5 6.4 3.8 10.1 3.8c1.9 0 3.9-.3 5.7-1.1l42.6-17.3c15.6 10.6 32.7 18.9 51 24.6c-1.6 3.6-2.5 7.5-2.5 11.7c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-3.6-.7-7.1-1.9-10.2c21.2 2.5 42.9 2.1 64.3-1.3c-1.2 3.1-1.9 6.6-1.9 10.2c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-4.7-1.1-9.1-3.1-13.1c40.3-14.4 73.8-42.6 94.3-79.3c5.5-9.9 10-20.4 13.4-31.5c4.7-15.2 6.1-31.1 6.1-43.5zM175.4 246.3c0-14.6 11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5s-26.5-11.9-26.5-26.5zm165.7 66.2c-15.6 21.2-41.9 33.1-73.4 33.1c-31.4 0-57.8-11.9-73.4-33.1c-2-2.7-1.4-6.5 1.3-8.5c2.7-2 6.5-1.4 8.5 1.3c13.1 17.8 36.3 27.8 63.5 27.8s50.4-10 63.5-27.8c2-2.7 5.8-3.3 8.5-1.3c2.8 2 3.4 5.8 1.5 8.5zm-5.7-39.7c-14.6 0-26.5-11.9-26.5-26.5s11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5z" />
+                </svg>
+                Waze
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-2 pt-6 border-t border-white/20 w-full flex flex-col gap-3">
+            <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Nossos Fixos</p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a href="tel:1932697718"
+                class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
+                (19) 3269-7718
+              </a>
+              <a href="tel:1932689757"
+                class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
+                (19) 3268-9757
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full md:flex-1 min-h-75 md:min-h-full rounded-3xl overflow-hidden shadow-lg border-4 border-gray-50">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.316885376045!2d-47.08971012395567!3d-22.929341638995393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8e52a20b7b1%3A0x5481a45c5823df37!2sFarma%20Gente%20Pomp%C3%A9ia!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+    <div id="cart-modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+      <div class="bg-white p-8 rounded-3xl min-w-[90%] md:min-w-[500px] max-h-[90vh] overflow-y-auto shadow-2xl">
+        <h2 class="text-center text-3xl font-black italic text-[#009b9d] mb-6">Meu Pedido</h2>
+
+        <div id="cart-items" class="flex flex-col gap-4 mb-6 border-b pb-6"></div>
+
+        <div class="flex justify-between items-center mb-6">
+          <p class="font-bold text-xl text-gray-800">Total:</p>
+          <span id="cart-total" class="font-black text-2xl text-[#009b9d]">R$ 0,00</span>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Nome Completo:</label>
+              <input type="text" placeholder="Como te chamamos?" id="user-name-input"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
+            </div>
+            <div>
+              <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">WhatsApp /
+                Telefone:</label>
+              <input type="text" placeholder="(19) 99999-9999" id="user-phone-input"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
+            </div>
+          </div>
+          <div class="bg-blue-50 border-l-4 border-[#009b9d] p-3 mb-4 rounded-r-xl">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🚚</span>
+              <p class="text-[11px] md:text-xs text-gray-700 leading-tight">
+                <span class="font-bold text-[#009b9d]">Aviso:</span> O valor total não inclui taxa de entrega.
+                Dependendo da sua localização, poderá ser cobrada uma taxa adicional informada pelo atendente.
+              </p>
+            </div>
+          </div>
+          <div>
+            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Endereço de entrega:</label>
+
+            <input type="text" placeholder="Rua / Avenida" id="address-input"
+              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
+            <p class="text-red-500 text-[10px] mt-1 hidden" id="address-warn">Campo obrigatório!</p>
+
+            <div class="flex gap-2 mt-2">
+              <div class="w-1/4">
+                <input type="text" placeholder="Nº" id="address-number-input"
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
+              </div>
+              <div class="flex-1">
+                <input type="text" placeholder="Bairro" id="address-neighborhood-input"
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
+              </div>
+            </div>
+
+            <div class="mt-2">
+              <input type="text" placeholder="Complemento (Apto, Bloco, Fundos...)" id="address-complement-input"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
+            </div>
+
+            <div class="flex justify-between">
+              <p class="text-red-500 text-[10px] hidden" id="address-number-warn">Nº obrigatório!</p>
+              <p class="text-red-500 text-[10px] hidden" id="address-neighborhood-warn">Bairro obrigatório!</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Pagamento:</label>
+              <select id="payment-method"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 bg-white focus:border-[#009b9d] outline-none cursor-pointer">
+                <option value="dinheiro">Dinheiro</option>
+                <option value="pix">Pix</option>
+                <option value="cartao">Cartão na Entrega</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Observação:</label>
+              <input type="text" placeholder="Ex: Troco para R$ 50..."
+                class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none"
+                id="obs">
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+          <p class="text-[11px] text-gray-500 text-center mb-3 uppercase font-bold tracking-wider">Possui
+            medicamento
+            com
+            receita?</p>
+          <a href="https://wa.me/5519989776179?text=Olá! Tenho uma receita e gostaria de incluir no meu pedido."
             target="_blank"
-            class="bg-white text-[#009b9d] font-bold py-4 px-8 rounded-full hover:bg-gray-50 hover:scale-105 duration-300 w-full max-w-64 shadow-md flex items-center justify-center gap-3 border-2 border-[#009b9d] no-underline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            class="w-full py-2 flex items-center justify-center gap-2 text-[#009b9d] font-bold text-sm border border-[#009b9d] rounded-lg hover:bg-[#009b9d] hover:text-white transition-all no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
               <circle cx="12" cy="13" r="4" />
             </svg>
-            Enviar Receita (Foto)
+            Anexar receita no Zap
+          </a>
+        </div>
+        <div class="flex items-center justify-between mt-8 gap-4">
+          <button id="close-modal-btn"
+            class="flex-1 py-3 font-bold text-gray-500 hover:bg-gray-100 rounded-xl transition-all">
+            Continuar comprando
+          </button>
+          <button id="checkout-btn"
+            class="flex-2 bg-[#da1d83] text-white font-black py-4 rounded-xl shadow-lg hover:bg-[#c21877] hover:scale-105 transition-all uppercase tracking-widest">
+            Finalizar no WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    <button id="cart-btn"
+      class="fixed bottom-10 right-6 z-50 bg-[#da1d83] text-white p-4 rounded-full shadow-2xl hover:scale-110 duration-300 flex items-center justify-center group">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+
+      <span id="cart-count"
+        class="absolute -top-1 -right-1 bg-[#009b9d] text-white text-xs font-bold min-w-5.5 h-5.5 flex items-center justify-center rounded-full border-2 border-white">
+        0
+      </span>
+
+      <span
+        class="absolute right-16 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        Ver carrinho
+      </span>
+    </button>
+    <section id="depoimentos" class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+
+        <div class="text-center mb-12" data-aos="fade-up">
+          <div class="flex justify-center items-center gap-2 mb-2">
+            <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="w-6 h-6" alt="Google">
+            <span class="text-gray-500 font-bold uppercase tracking-widest text-xs">Avaliações Reais</span>
+          </div>
+          <h2 class="text-3xl font-black text-[#009b9d]">O QUE DIZEM NOSSOS CLIENTES</h2>
+          <div class="flex justify-center mt-2 text-yellow-400">
+            ★★★★★ <span class="text-gray-400 ml-2 text-sm font-normal">(4.7/5 no Google)</span>
+          </div>
+          <div class="h-1 w-20 bg-[#da1d83] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div
+            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold shadow-sm">
+                R</div>
+              <div>
+                <h4 class="font-bold text-sm text-gray-800">Rose Mary Aparecida Olivo</h4>
+                <p class="text-[10px] text-gray-400">Avaliação do Google</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm italic leading-relaxed">
+              "Pessoal atende muito bem e rápido. São gentis, atenciosos e bem humorados. Sempre me tratam com
+              muito
+              respeito e cordialidade."
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold shadow-sm">
+                R</div>
+              <div>
+                <h4 class="font-bold text-sm text-gray-800">Rubenita Oliveira</h4>
+                <p class="text-[10px] text-gray-400">Avaliação do Google</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm italic leading-relaxed">
+              "Excelentes preços, excelente localização e atendimento muito rápido e eficiente, todos muito
+              educados
+              e
+              comprometidos com o trabalho... Eu recomendo!!"
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
+            data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-[#da1d83] flex items-center justify-center text-white font-bold shadow-sm">
+                N</div>
+              <div>
+                <h4 class="font-bold text-sm text-gray-800">Neubi Oliveira Rodrigues</h4>
+                <p class="text-[10px] text-gray-400">Avaliação do Google</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm italic leading-relaxed">
+              "Muito atenciosos, bons preços e lugar para estacionar adequado."
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-offset="0">
+          <a href="https://www.google.com/maps/place/Farmagente/@-22.9515594,-47.1062061,17z/data=!4m8!3m7!1s0x94c8b6727284b115:0x8898b9e671607590!8m2!3d-22.9515594!4d-47.1062061!9m1!1b1!16s%2Fg%2F11b6znm37r?entry=ttu"
+            target="_blank"
+            class="bg-white border-2 border-gray-200 px-8 py-3 rounded-full font-bold text-gray-600 hover:bg-[#009b9d] hover:text-white hover:border-[#009b9d] transition-all inline-block no-underline shadow-sm">
+            Ler mais no Google Maps
           </a>
         </div>
 
-        <div class="w-full flex flex-col gap-2">
-          <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Como chegar</p>
-          <div class="flex gap-3">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Farma+Gente+Pompeia+Campinas" target="_blank"
-              class="flex-1 bg-white text-[#009b9d] font-bold py-3 rounded-xl active:bg-gray-100 duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg"
-                class="h-4 w-auto" alt="">
-              Maps
-            </a>
-            <a href="https://www.waze.com/live-map/directions?to=ll.-22.929828%2C-47.087135" target="_blank"
-              class="flex-1 bg-[#33ccff] text-white font-bold py-3 rounded-xl active:bg-[#2bb5e0] duration-300 flex items-center justify-center gap-2 no-underline text-xs shadow-sm hover:scale-105 ">
-              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 512 512">
-                <path
-                  d="M447.5 282.8c-1.3-46.3-21.5-88-56.9-117.2c-35-28.9-81.2-44.4-130-43.6c-48.8.8-94.2 18.5-127.9 49.8c-32.5 30.1-49.9 71.3-49.1 115.8c.4 20.3 4.2 39.8 11.1 57.8l-15.6 34.6c-2.4 5.3-1.1 11.5 3.3 15.4c2.8 2.5 6.4 3.8 10.1 3.8c1.9 0 3.9-.3 5.7-1.1l42.6-17.3c15.6 10.6 32.7 18.9 51 24.6c-1.6 3.6-2.5 7.5-2.5 11.7c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-3.6-.7-7.1-1.9-10.2c21.2 2.5 42.9 2.1 64.3-1.3c-1.2 3.1-1.9 6.6-1.9 10.2c0 16.1 13.1 29.2 29.2 29.2s29.2-13.1 29.2-29.2c0-4.7-1.1-9.1-3.1-13.1c40.3-14.4 73.8-42.6 94.3-79.3c5.5-9.9 10-20.4 13.4-31.5c4.7-15.2 6.1-31.1 6.1-43.5zM175.4 246.3c0-14.6 11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5s-26.5-11.9-26.5-26.5zm165.7 66.2c-15.6 21.2-41.9 33.1-73.4 33.1c-31.4 0-57.8-11.9-73.4-33.1c-2-2.7-1.4-6.5 1.3-8.5c2.7-2 6.5-1.4 8.5 1.3c13.1 17.8 36.3 27.8 63.5 27.8s50.4-10 63.5-27.8c2-2.7 5.8-3.3 8.5-1.3c2.8 2 3.4 5.8 1.5 8.5zm-5.7-39.7c-14.6 0-26.5-11.9-26.5-26.5s11.9-26.5 26.5-26.5s26.5 11.9 26.5 26.5s-11.9 26.5-26.5 26.5z" />
-              </svg>
-              Waze
-            </a>
-          </div>
-        </div>
-
-        <div class="mt-2 pt-6 border-t border-white/20 w-full flex flex-col gap-3">
-          <p class="text-white text-[10px] font-bold opacity-60 uppercase tracking-widest">Nossos Fixos</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="tel:1932697718"
-              class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
-              (19) 3269-7718
-            </a>
-            <a href="tel:1932689757"
-              class="flex items-center gap-2 text-white hover:text-[#da1d83] duration-300 hover:scale-105 bg-white/10 px-4 py-2 rounded-lg">
-              (19) 3268-9757
-            </a>
-          </div>
-        </div>
       </div>
-
-      <div
-        class="w-full md:flex-1 min-h-75 md:min-h-full rounded-3xl overflow-hidden shadow-lg border-4 border-gray-50">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.316885376045!2d-47.08971012395567!3d-22.929341638995393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8e52a20b7b1%3A0x5481a45c5823df37!2sFarma%20Gente%20Pomp%C3%A9ia!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-
-    </div>
-  </div>
-  <div id="cart-modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
-    <div class="bg-white p-8 rounded-3xl min-w-[90%] md:min-w-[500px] max-h-[90vh] overflow-y-auto shadow-2xl">
-      <h2 class="text-center text-3xl font-black italic text-[#009b9d] mb-6">Meu Pedido</h2>
-
-      <div id="cart-items" class="flex flex-col gap-4 mb-6 border-b pb-6"></div>
-
-      <div class="flex justify-between items-center mb-6">
-        <p class="font-bold text-xl text-gray-800">Total:</p>
-        <span id="cart-total" class="font-black text-2xl text-[#009b9d]">R$ 0,00</span>
-      </div>
-
-      <div class="flex flex-col gap-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Nome Completo:</label>
-            <input type="text" placeholder="Como te chamamos?" id="user-name-input"
-              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
-          </div>
-          <div>
-            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">WhatsApp /
-              Telefone:</label>
-            <input type="text" placeholder="(19) 99999-9999" id="user-phone-input"
-              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
-          </div>
-        </div>
-        <div class="bg-blue-50 border-l-4 border-[#009b9d] p-3 mb-4 rounded-r-xl">
-          <div class="flex items-center gap-2">
-            <span class="text-lg">🚚</span>
-            <p class="text-[11px] md:text-xs text-gray-700 leading-tight">
-              <span class="font-bold text-[#009b9d]">Aviso:</span> O valor total não inclui taxa de entrega.
-              Dependendo da sua localização, poderá ser cobrada uma taxa adicional informada pelo atendente.
-            </p>
-          </div>
-        </div>
-        <div>
-          <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Endereço de entrega:</label>
-
-          <input type="text" placeholder="Rua / Avenida" id="address-input"
-            class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none transition-all">
-          <p class="text-red-500 text-[10px] mt-1 hidden" id="address-warn">Campo obrigatório!</p>
-
-          <div class="flex gap-2 mt-2">
-            <div class="w-1/4">
-              <input type="text" placeholder="Nº" id="address-number-input"
-                class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
-            </div>
-            <div class="flex-1">
-              <input type="text" placeholder="Bairro" id="address-neighborhood-input"
-                class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
-            </div>
-          </div>
-
-          <div class="mt-2">
-            <input type="text" placeholder="Complemento (Apto, Bloco, Fundos...)" id="address-complement-input"
-              class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-[#009b9d] outline-none transition-all">
-          </div>
-
-          <div class="flex justify-between">
-            <p class="text-red-500 text-[10px] hidden" id="address-number-warn">Nº obrigatório!</p>
-            <p class="text-red-500 text-[10px] hidden" id="address-neighborhood-warn">Bairro obrigatório!</p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Pagamento:</label>
-            <select id="payment-method"
-              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 bg-white focus:border-[#009b9d] outline-none cursor-pointer">
-              <option value="dinheiro">Dinheiro</option>
-              <option value="pix">Pix</option>
-              <option value="cartao">Cartão na Entrega</option>
-            </select>
-          </div>
-          <div>
-            <label class="font-bold text-gray-700 text-sm uppercase tracking-wide">Observação:</label>
-            <input type="text" placeholder="Ex: Troco para R$ 50..."
-              class="w-full border-2 border-gray-100 p-3 rounded-xl mt-1 focus:border-[#009b9d] outline-none" id="obs">
-          </div>
-        </div>
-      </div>
-      <div class="mt-6 p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
-        <p class="text-[11px] text-gray-500 text-center mb-3 uppercase font-bold tracking-wider">Possui
-          medicamento
-          com
-          receita?</p>
-        <a href="https://wa.me/5519989776179?text=Olá! Tenho uma receita e gostaria de incluir no meu pedido."
-          target="_blank"
-          class="w-full py-2 flex items-center justify-center gap-2 text-[#009b9d] font-bold text-sm border border-[#009b9d] rounded-lg hover:bg-[#009b9d] hover:text-white transition-all no-underline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-            <circle cx="12" cy="13" r="4" />
-          </svg>
-          Anexar receita no Zap
-        </a>
-      </div>
-      <div class="flex items-center justify-between mt-8 gap-4">
-        <button id="close-modal-btn"
-          class="flex-1 py-3 font-bold text-gray-500 hover:bg-gray-100 rounded-xl transition-all">
-          Continuar comprando
-        </button>
-        <button id="checkout-btn"
-          class="flex-2 bg-[#da1d83] text-white font-black py-4 rounded-xl shadow-lg hover:bg-[#c21877] hover:scale-105 transition-all uppercase tracking-widest">
-          Finalizar no WhatsApp
-        </button>
-      </div>
-    </div>
-  </div>
-  <button id="cart-btn"
-    class="fixed bottom-10 right-6 z-50 bg-[#da1d83] text-white p-4 rounded-full shadow-2xl hover:scale-110 duration-300 flex items-center justify-center group">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="9" cy="21" r="1"></circle>
-      <circle cx="20" cy="21" r="1"></circle>
-      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-    </svg>
-
-    <span id="cart-count"
-      class="absolute -top-1 -right-1 bg-[#009b9d] text-white text-xs font-bold min-w-5.5 h-5.5 flex items-center justify-center rounded-full border-2 border-white">
-      0
-    </span>
-
-    <span
-      class="absolute right-16 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-      Ver carrinho
-    </span>
-  </button>
-  <section id="depoimentos" class="py-16 bg-white overflow-hidden">
-    <div class="container mx-auto px-4">
-
-      <div class="text-center mb-12" data-aos="fade-up">
-        <div class="flex justify-center items-center gap-2 mb-2">
-          <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="w-6 h-6" alt="Google">
-          <span class="text-gray-500 font-bold uppercase tracking-widest text-xs">Avaliações Reais</span>
-        </div>
-        <h2 class="text-3xl font-black text-[#009b9d]">O QUE DIZEM NOSSOS CLIENTES</h2>
-        <div class="flex justify-center mt-2 text-yellow-400">
-          ★★★★★ <span class="text-gray-400 ml-2 text-sm font-normal">(4.7/5 no Google)</span>
-        </div>
-        <div class="h-1 w-20 bg-[#da1d83] mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div
-          class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold shadow-sm">
-              R</div>
-            <div>
-              <h4 class="font-bold text-sm text-gray-800">Rose Mary Aparecida Olivo</h4>
-              <p class="text-[10px] text-gray-400">Avaliação do Google</p>
-            </div>
-          </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed">
-            "Pessoal atende muito bem e rápido. São gentis, atenciosos e bem humorados. Sempre me tratam com
-            muito
-            respeito e cordialidade."
-          </p>
-        </div>
-
-        <div
-          class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
-          data-aos="fade-up" data-aos-delay="300">
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold shadow-sm">
-              R</div>
-            <div>
-              <h4 class="font-bold text-sm text-gray-800">Rubenita Oliveira</h4>
-              <p class="text-[10px] text-gray-400">Avaliação do Google</p>
-            </div>
-          </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed">
-            "Excelentes preços, excelente localização e atendimento muito rápido e eficiente, todos muito
-            educados
-            e
-            comprometidos com o trabalho... Eu recomendo!!"
-          </p>
-        </div>
-
-        <div
-          class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#009b9d] transition-all duration-300 shadow-sm hover:shadow-md"
-          data-aos="fade-up" data-aos-delay="500">
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-full bg-[#da1d83] flex items-center justify-center text-white font-bold shadow-sm">
-              N</div>
-            <div>
-              <h4 class="font-bold text-sm text-gray-800">Neubi Oliveira Rodrigues</h4>
-              <p class="text-[10px] text-gray-400">Avaliação do Google</p>
-            </div>
-          </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed">
-            "Muito atenciosos, bons preços e lugar para estacionar adequado."
-          </p>
-        </div>
-
-      </div>
-
-      <div class="mt-12 text-center" data-aos="fade-up" data-aos-offset="0">
-        <a href="https://www.google.com/maps/place/Farmagente/@-22.9515594,-47.1062061,17z/data=!4m8!3m7!1s0x94c8b6727284b115:0x8898b9e671607590!8m2!3d-22.9515594!4d-47.1062061!9m1!1b1!16s%2Fg%2F11b6znm37r?entry=ttu"
-          target="_blank"
-          class="bg-white border-2 border-gray-200 px-8 py-3 rounded-full font-bold text-gray-600 hover:bg-[#009b9d] hover:text-white hover:border-[#009b9d] transition-all inline-block no-underline shadow-sm">
-          Ler mais no Google Maps
-        </a>
-      </div>
-
-    </div>
-  </section>
-  <footer class="w-full h-24 flex items-center justify-center gap-4 bg-[#009b9d] text-white text-sm font-bold">
-    <p>©Farmagente Pompeia. Todos os direitos reservados.</p>
-  </footer>
-  <script type="module" src="/src/main.js"></script>
-</body>
+    </section>
+    <footer class="w-full h-24 flex items-center justify-center gap-4 bg-[#009b9d] text-white text-sm font-bold">
+      <p>©Farmagente Pompeia. Todos os direitos reservados.</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 
 </html>

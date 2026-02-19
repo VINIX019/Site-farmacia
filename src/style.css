@@ -23,6 +23,14 @@
     /* Firefox */
 }
 
+:target {
+    scroll-margin-top: 100px;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+#Promocoes {
+    scroll-margin-top: 90px;
 }
